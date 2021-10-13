@@ -1,0 +1,72 @@
+
+<div class="p-4">
+
+<h1 style="text-align: center; ">Wel-come to our service center</h1>
+<p>
+<h5 style="font-size:20px;color: black;text-align: justify; font-family: 'Times New Roman', Times, serif;">
+
+With  the  rapid  development  of  electronic  industry,  the continuous  upgrading  of  electronic  products  lead  to  the elimination of more and more waste electronic products and electrical equipment around the world which would result in the  formation  of  a  large  amount  of  electronic  waste. Electronic waste has become the fastest growing garbage in the world.  Most developed countries have begun to focus on the electronic waste recycling and disposal, and respectively established a suitable system of electronic waste recycling.
+</h5></p><p><h5 style="font-size:20px;color: black;text-align: justify; font-family: 'Times New Roman', Times, serif;">
+  So to reduce this growing e-waste we are providing here a facility, from here you can sale e-waste that you have at your place to the people who can make something best from it. It may help to reduce the e-waste and also we can produce some new things using it for decoration.And also from this you can get money. 
+</h5></p>
+
+<h3 style="color: brown">Steps to be member of our service</h3>
+<h5 style="font-family: 'Times New Roman', Times, serif;">1. Click on the create account link</h5>
+<h5 style="font-family: 'Times New Roman', Times, serif;">2. you will go to the registration page</h5>
+<h5 style="font-family: 'Times New Roman', Times, serif;">3. fill all the information </h5>
+<h5 style="font-family: 'Times New Roman', Times, serif;">4. Then you will get you own username and password</h5>
+<h5 style="font-family: 'Times New Roman', Times, serif;">5. Now Login to your account then you will go to the service contents</h6>
+<h5 style="font-family: 'Times New Roman', Times, serif;">6. Now you can see the inmage box where you can put the image <br>of whatever e-waste you have and fill all the information</h5>
+<h5 style="font-family: 'Times New Roman', Times, serif;">7. After completing these steps whatever product you uploaded here can be visible at home page</h5>
+</div> 
+<div >
+  <div class="container w-50" id="id01" >
+    <div class="imgcontainer">
+      <img src="/images/img_avatar2.png" alt="Avatar" class="avatar" style="height: 10%; width: 10%;">
+    </div>
+
+    <form name="myLog" ng-submit="login(myLog.$valid)">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" ng-model="entity.sellerUsername" required>
+      
+      <label for="psw">
+        <b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" ng-model="entity.sellerpass" required>
+      
+        
+      <button type="submit" data-toggle="modal">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <span>Don't have account <a href="#seller_registration">create account!</a></span></form>
+    </div>
+   
+
+
+    
+<!-- The Modal -->
+<div id="errModal" class="logmodal">
+  <!-- Modal content -->
+  <div class="logmodal-content">
+    <p>{{entity.message}}</p>
+  </div>
+</div>
+ 
+<!-- The Modal -->
+<div id="spinnerModal" class="logmodal">
+
+  <!-- Modal content -->
+  <div class="logmodal-content text-center" style="background-color: transparent;">
+    <svg height="100px" viewBox="0 0 100 100" width="100px" xmlns="http://www.w3.org/2000/svg">
+      <g transform="scale(0.8) translate(-0.6, -0.6)">
+          <g id="spinner">
+              <path d="M50 15A35 35 0 1 0 74.787 25.213" fill="none" stroke="#fff" stroke-width="8px" />
+              <path d="M50 0L50 30L66 15L50 0" fill="#fff" />
+          </g>
+      </g>
+  </svg>
+     
+  </div>
+
+</div>
+

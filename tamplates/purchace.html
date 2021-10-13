@@ -1,0 +1,98 @@
+<div class="container w-100" style="border-style: ridge; margin-top: 5px; margin-bottom: 5px;">
+    <div class=" text-center" style="font-size: 20px;"><b><u>Purchase Details</u></b></div><br>
+
+    <form name="Purchase" ng-submit="Pinfo(Purchase.$valid)">
+        <div class="row w-100">
+            <div class="col-12 col-lg-4">
+
+                <label for="Name"><b>Name <span class="text-danger" style="font-size: small;">*</span></b></label>
+                <input type="text" disabled placeholder="Enter Name" id="Name" ng-model="entity.buyerName"
+                    style="border-radius: 10px;" required>
+            </div>
+            <div class="col-12 col-lg-4">
+                <label for="Location"><b>Address<span class="text-danger" style="font-size: small;">*</span></b></label>
+                <input type="text" disabled placeholder="Enter Address" id="Location" ng-model="entity.buyerAddress"
+                    style="border-radius: 10px;" required>
+            </div>
+            <div class="col-12 col-lg-4">
+                <label for="Location"><b>City<span class="text-danger" style="font-size: small;">*</span></b></label>
+                <input type="text" disabled placeholder="Enter City" id="Location" ng-model="entity.buyerPlace"
+                    style="border-radius: 10px;" required>
+            </div>
+        </div>
+        <div class="row w-100">
+
+            <div class="col-12 col-lg-4">
+                <label for="cdate"><b>Date:<span class="text-danger" style="font-size: small;">*</span></b></label>
+                <input type="date" class="date" placeholder="date* " disabled ng-model="entity.orderDate" />
+            </div>
+            <div class="col-12 col-lg-4">
+                <label for="Payamt"><b>Payment Amount<span class="text-danger"
+                            style="font-size: small;">*</span></b></label>
+                <input type="number" placeholder="Enter amount" id="Payamt" disabled name="Payamt"
+                    ng-model="entity.Price">
+            </div>
+            <div class="col-12 col-lg-4">
+                <label for="paid"><b>Payment paid<span class="text-danger"
+                            style="font-size: small;">*</span></b></label>
+                <input type="number" placeholder="paid" ng-change="cal()" ng-model="entity.PaidAmt" />
+            </div>
+        </div>
+        <div class="row w-100">
+
+            <div class="col-12 col-lg-4">
+                <label for="due"><b>Payment Due<span class="text-danger" style="font-size: small;">*</span></b></label>
+                <input type="number" placeholder="due" disabled ng-model="entity.DueAmt" />
+            </div>
+        </div>
+
+        <div class="  d-flex justify-content-end">
+            <button type="submit" class="w-25" style="border-radius: 10px;">Submit</button>
+        </div>
+
+
+</div>
+</form>
+</div>
+<div id="errModal" class="logmodal">
+    <div class="logmodal-content">
+
+        <table id="bill">
+            <thead><h3 class="text-center">Invoice</h3></thead>
+            <tr>
+                <th>
+                    <b>Name:</b>
+                </th>
+                <th><b>City:</b></th>
+                <th><b>Phone no.:</b></th>
+                <th><b>Purchase Date:</b></th>
+                <th> <b>Paid Amount:</b></th>
+                <th><b>Due Amount:</b></th>
+            </tr>
+            <tr>
+                <td> {{entity.buyerName}} </td>
+                <td>{{entity.buyerPlace}} </td>
+                <td>{{entity.buyerPh}} </td>
+                <td>{{entity.orderDate}}</td>
+                <td>{{entity.PaidAmt}} </td>
+                <td>{{entity.DueAmt}} </td>
+            </tr>
+            
+        </table>
+        <div><button type="button"value="Export" ng-click="Export()">Confirm</button></div>
+
+        <!-- <export-to-pdf elem-id="bill"></export-to-pdf> -->
+    </div>
+</div>
+<div id="spinnerModal" class="logmodal">
+    <div class="logmodal-content text-center" style="background-color: transparent;">
+        <svg height="100px" viewBox="0 0 100 100" width="100px" xmlns="http://www.w3.org/2000/svg">
+            <g transform="scale(0.8) translate(-0.6, -0.6)">
+                <g id="spinner">
+                    <path d="M50 15A35 35 0 1 0 74.787 25.213" fill="none" stroke="#fff" stroke-width="8px" />
+                    <path d="M50 0L50 30L66 15L50 0" fill="#fff" />
+                </g>
+            </g>
+        </svg>
+    </div>
+</div>

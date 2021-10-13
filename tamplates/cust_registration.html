@@ -1,0 +1,56 @@
+
+	<div class="container w-50">
+        <br><br>
+          <h1>Registration Form</h1>
+      <form name="addUser" ng-submit="buyer_register(addUser.$valid)"> <hr>
+          <label for="Name"><b>Name <span class="text-danger" style="font-size: small;">*</span></b></label>
+          <input type="text" placeholder="Enter Name"id="Name" ng-model="entity.buyerName" required>
+         
+          <label for="Location"><b>Address<span class="text-danger"style="font-size: small;">*</span></b></label>
+          <input type="text" placeholder="Enter Address"id="Location" ng-model="entity.buyerAddress" required>
+
+          <label for="Location"><b>City<span class="text-danger"style="font-size: small;">*</span></b></label>
+          <input type="text" placeholder="Enter City"id="Location" ng-model="entity.buyerPlace" required>
+          
+          <label for="Phno"><b>Phon no.<span class="text-danger"style="font-size: small;">*</span></b></label>
+          <input type="number" placeholder="Enter Phon no"id="Phno" name="Phno" ng-model="entity.buyerPh" ng-pattern="/^\d{0,9}(\.\d{1,9})?$/" required>
+          <span  ng-show="addUser.Phno.$error.pattern" style="color: red;">Not valid number!</span><br>
+          
+          <label for="UName"><b>Username<span class="text-danger" style="font-size: small;">*</span></b></label>
+          <input type="text" placeholder="Enter UserName"id="UName" ng-model="entity.buyerUsername" required>
+          
+          <label for="psw"><b>Password<span class="text-danger"style="font-size: small;">*</span></b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" ng-model="entity.buyerPass" required>
+      
+          <label for="psw-repeat"><b>Confirm Password<span class="text-danger"style="font-size: small;">*</span></b></label>
+          <input type="password" placeholder="Confirm Password" name="psw-repeat" id="psw-repeat" ng-model="entity.buyerconfPass" required>
+        
+          <hr>
+          <button type="submit" >Register</button>
+        </form>
+        </div>
+        <div id="errModal" class="logmodal">
+            <!-- Modal content -->
+            <div class="logmodal-content">
+              <p>{{entity.message}}</p>
+            </div>
+          </div>
+           
+          <!-- The Modal -->
+          <div id="spinnerModal" class="logmodal">
+          
+            <!-- Modal content -->
+            <div class="logmodal-content text-center" style="background-color: transparent;">
+              <svg height="100px" viewBox="0 0 100 100" width="100px" xmlns="http://www.w3.org/2000/svg">
+                <g transform="scale(0.8) translate(-0.6, -0.6)">
+                    <g id="spinner">
+                        <path d="M50 15A35 35 0 1 0 74.787 25.213" fill="none" stroke="#fff" stroke-width="8px" />
+                        <path d="M50 0L50 30L66 15L50 0" fill="#fff" />
+                    </g>
+                </g>
+            </svg>
+               
+            </div>
+          
+          </div>
+          

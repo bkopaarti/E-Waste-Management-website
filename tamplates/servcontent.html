@@ -1,0 +1,59 @@
+<div>
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+      <br><br><br><br>
+      <div class="card">
+      <center>
+        <img id="img_input" src="/images/default.png" ng-src="{{image}}" alt="Choosen image will display here" style="width:50%; margin:5px" ><span class="text-danger"style="font-size: small;">*</span></img>
+        <h6>
+          <input id="image" class="hidden" type="file" img-upload ng-model="imageName" name="imageName"
+            value="Click here to upload Image" />
+        </h6>
+      </center>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <br>
+      <form name="addObject" ng-submit="addinfo(addObject.$valid)"  >
+    
+     
+     
+    <label><b>Quantity in KG <span class="text-danger"style="font-size: small;">*</span></b></label>
+      <input type="number" placeholder="Enter quantity" ng-model="entity.Qty" required/>
+     
+      <label><b>Price<span class="text-danger"style="font-size: small;">*</span></b></label>
+      <input type="number" placeholder="Enter Price" ng-model="entity.Price" required/>
+      
+      <label><b>Available till date<span class="text-danger"style="font-size: small;">*</span></b></label>
+      <input type="date" placeholder="Enter date (yyyy-mm-dd)" ng-model="entity.expDate" required />
+      
+      <button id="uploadButton" type="submit">Upload Contents"</button>
+    </form>
+    </div>
+</div>
+  </div>
+</div>
+
+</div>
+
+<div id="errModal" class="logmodal">
+  <div class="logmodal-content">
+    <p>{{entity.message}}
+      
+    </p>
+  </div>
+</div>
+<div id="spinnerModal" class="logmodal">
+  <div class="logmodal-content text-center" style="background-color: transparent;">
+    <svg height="100px" viewBox="0 0 100 100" width="100px" xmlns="http://www.w3.org/2000/svg">
+      <g transform="scale(0.8) translate(-0.6, -0.6)">
+          <g id="spinner">
+              <path d="M50 15A35 35 0 1 0 74.787 25.213" fill="none" stroke="#fff" stroke-width="8px" />
+              <path d="M50 0L50 30L66 15L50 0" fill="#fff" />
+          </g>
+      </g>
+  </svg>
+  </div>
+</div>

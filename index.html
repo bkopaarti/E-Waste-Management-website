@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<head>
+   <!-- bootstrap -->
+   <link href="css/style1.css">
+   <script src="js/jquery.js"></script>
+   <script src="js/popper.js"></script>
+   <script src="js/bootstrapmin.js"></script>
+
+   <link href="css/style2.css"> 
+  
+   <script src="js/boot.js"></script>
+
+   <!-- Angular -->
+   <script src="js/angularmin.js"></script>
+   <!-- UI-Router -->
+   <script src="js/angularrout.js"></script>
+
+   <!-- Bootstrap core CSS -->
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Fontawesome CSS -->
+   <link href="css/all.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="css/style.css" rel="stylesheet">
+
+   <script src="js/app.js"></script>
+   <script src="./js/uploadImage.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+     
+   <!-- Font Awesome CDN -->
+   <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+   
+      
+     
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+ 
+</head>
+
+
+<body data-ng-app="myApp" id="topheader">
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top shadow-sm">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">
+            <img src="/images/img_avatar2.png" style="height: 10%; width: 10%;">
+            <label style="color: darkslategray; font-size: 30px;">E-waste Management</label>
+         </a>
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#information">Information</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#services">Services</a>
+               </li>
+               <li class="nav-item dropdown" style="width: 14em;">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     growth of e-waste
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                     <a class="dropdown-item" href="#video">video</a>
+                     <a class="dropdown-item" href="#info">E-waste</a>
+
+
+                  </div>
+               </li>
+               <li class="nav-item" style="width: 7em;">
+                  <a class="nav-link" href="#about">About us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div data-ui-view></div>
+
+   <footer class="footer">
+      <div class="container bottom_border">
+         <div class="row d-flex justify-content-center">
+            <div class="col-lg-3 col-md-6 col-sm-6 col pr-5 text-center">
+               <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+               <!--headin5_amrc-->
+               <p class="mb10">K.E. Society's
+                  Rajarambapu Institute Of
+                  Technology Rajaramnagar,
+                  Islampur, Tal. Walwa Dist. Sangli,
+                  Maharashtra, India - 415414.</p>
+
+               <p><i class="fa fa-phone"></i> +91 - 2342 – 220329, 9970700700 </p>
+               <p><i class="fa fa fa-envelope"></i> director@ritindia.edu </p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 pl-5 text-center">
+               <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+               <!--headin5_amrc-->
+               <ul class="footer_ul_amrc">
+                  <li><a href="#">Our Team </a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Get In Touch</a></li>
+               </ul>
+               <!--footer_ul_amrc ends here-->
+            </div>
+
+         </div>
+      </div>
+      <div class="container">
+         <div class="footer-logo">
+            <h1 style="color: aliceblue;">E-waste Management</h1>
+         </div>
+         <!--foote_bottom_ul_amrc ends here-->
+         <p class="copyright text-center">All Rights Reserved. &copy;
+         </p>
+         <ul class="social_footer_ul">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+         </ul>
+         <!--social_footer_ul ends here-->
+      </div>
+   </footer>
+</body>
+
+</html>
